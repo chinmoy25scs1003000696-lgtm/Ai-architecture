@@ -28,7 +28,7 @@ def generate_synthetic_telemetry(num_records: int = 1000) -> pd.DataFrame:
         "timestamp": np.random.choice(timestamps, num_records),
         "sku_id": np.random.choice(sku_ids, num_records),
         "temperature": np.random.uniform(15.0, 35.0, num_records),
-        "traffic_delay_mins": np.random.exponential(scale=10.0, num_records),
+        "traffic_delay_mins": np.random.exponential(10.0,size=num_records),
         "historical_demand": np.random.poisson(lam=120, size=num_records)
     }
     df = pd.DataFrame(data)
