@@ -24,4 +24,4 @@ jobs:
 
       - name: Execute Application
         run: |
-          python pipeline. py
+          python pipeline.py
